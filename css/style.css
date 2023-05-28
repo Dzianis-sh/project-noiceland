@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #141414;
+  --ff-libre-franklin: "Libre Franklin", sans-serif;
+  --ff-source-serif-pro: "Source Serif Pro", serif;
+  --ff-teno-sans: "Tenor Sans", sans-serif;
+  --base-font-size: 14px;
+  --base-line-height: 24px;
+  --base-text-color: #000000;
+  --text-color: #999999;
+  --border-color: #e6e6e6;
+  --footer-titles-text-color: #666666;
+  color: var(--base-text-color);
+  font-size: var(--base-font-size);
+  font-family: sans-serif;
+  line-height: var(--base-line-height);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  background: var(--main-bg-color);
+  display: grid;
+  grid-template: minmax(90px, auto) 1fr minmax(auto, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+a {
+  transition: 0.4s;
+  font-family: var(--ff-libre-franklin);
+  font-weight: 400;
+  color: var(--base-text-color);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+}
+
+a:visited {
+  color: var(--footer-titles-text-color);
+}
+
+a:hover {
+  color: rgb(0, 19, 101);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+
+.header {
+  padding: 35px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__body {
+  display: grid;
+  grid-template: 1fr / minmax(135px, auto) 1fr minmax(270px, auto);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-link {
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-link:hover {
+  transform: scale(97%);
+}
+
+.header__logo-link path {
+  transition: 0.4s;
+}
+
+.header__logo-link:hover path {
+  fill: rgba(0, 86, 139, 0.6);
+}
+
+.header__nav {
+  padding-left: 15px;
+  grid-column: 3 / 4;
+}
+
+.header__nav-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.header__nav-container li a:hover {
+  text-shadow: 0 0 2px rgba(0, 34, 169, 0.6);
+}
+
+.burger-menu-btn {
+  display: none;
+}
+.mobile-nav-hidden {
+  display: none;
+}
+
+/* end header */
+
+/* main */
+
+.content {
+  padding: 60px 0 90px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wide-block {
+  display: flex;
+}
+
+.wide-block__description {
+  padding-left: 50px;
+  flex: 0 1 auto;
+  max-width: 480px;
+}
+.wide-block__img {
+  flex: 1 1 100%;
+}
+.wide-block__img img {
+  width: 100%;
+  height: auto;
+}
+
+/* class description */
+
+.description {
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: column;
+}
+
+.description__type {
+  font-family: var(--ff-libre-franklin);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.description__title {
+  font-family: var(--ff-teno-sans);
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 27px;
+}
+.description__text {
+  text-transform: none;
+  font-family: var(--ff-source-serif-pro);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.description__author {
+  font-family: var(--ff-libre-franklin);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+.description__link {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+
+/* end class description */
+
+/* end main */
