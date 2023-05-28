@@ -107,8 +107,18 @@ body {
     "footer";
 }
 
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
 a {
-  transition: 0.4s;
+  transition: 0.3s;
   font-family: var(--ff-libre-franklin);
   font-weight: 400;
   color: var(--base-text-color);
@@ -116,18 +126,20 @@ a {
   line-height: var(--base-line-height);
 }
 
-a:visited {
-  color: var(--footer-titles-text-color);
-}
-
 a:hover {
-  color: rgb(0, 19, 101);
+  color: rgb(0, 25, 138);
 }
 
 .container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.container-mod {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* header */
@@ -179,7 +191,7 @@ a:hover {
 }
 
 .header__nav-container li a:hover {
-  text-shadow: 0 0 2px rgba(0, 34, 169, 0.6);
+  text-shadow: 0 0 2px rgba(0, 28, 138, 0.748);
 }
 
 .burger-menu-btn {
@@ -200,6 +212,7 @@ a:hover {
 
 .wide-block {
   display: flex;
+  margin-bottom: 60px;
 }
 
 .wide-block__description {
@@ -207,12 +220,28 @@ a:hover {
   flex: 0 1 auto;
   max-width: 480px;
 }
+
 .wide-block__img {
   flex: 1 1 100%;
 }
+
 .wide-block__img img {
   width: 100%;
   height: auto;
+}
+
+.wide-block .wide-block__title {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 27px;
+}
+
+.wide-block__text {
+  text-transform: none;
+  font-family: var(--ff-source-serif-pro);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 28px;
 }
 
 /* class description */
@@ -234,17 +263,9 @@ a:hover {
 
 .description__title {
   font-family: var(--ff-teno-sans);
-  font-size: 36px;
-  line-height: 42px;
-  margin-bottom: 27px;
+  margin-bottom: 15px;
 }
-.description__text {
-  text-transform: none;
-  font-family: var(--ff-source-serif-pro);
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 28px;
-}
+
 .description__author {
   font-family: var(--ff-libre-franklin);
   font-size: 10px;
@@ -259,6 +280,46 @@ a:hover {
   letter-spacing: 1px;
 }
 
+.description__link:hover {
+  color: #888888;
+  text-decoration: underline;
+}
+
 /* end class description */
+
+/* articles */
+
+.articles {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 386px));
+  /* grid-template-columns: repeat(auto-fill, minmax(386px, 1fr)); */
+  padding-top: 60px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card__img {
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.card__img img {
+  transition: all 0.4s;
+}
+
+.card__img:hover img {
+  transform: scale(1.05);
+}
+
+articles__img img {
+  aspect-ratio: 387 / 254;
+  width: 100%;
+  height: auto;
+}
+
+/* end articles */
 
 /* end main */
