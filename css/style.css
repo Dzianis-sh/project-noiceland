@@ -117,6 +117,15 @@ body {
   grid-area: footer;
 }
 
+.block-title {
+  text-transform: uppercase;
+  font-family: var(--ff-libre-franklin);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+
 a {
   transition: 0.3s;
   font-family: var(--ff-libre-franklin);
@@ -304,7 +313,6 @@ a:hover {
 }
 
 .card__img {
-  width: 100%;
   margin-bottom: 24px;
   overflow: hidden;
 }
@@ -325,8 +333,6 @@ a:hover {
 
 articles__img img {
   aspect-ratio: 387 / 254;
-  width: 100%;
-  height: auto;
 }
 
 /* end articles */
@@ -341,13 +347,7 @@ articles__img img {
 }
 
 .latest-posts__title {
-  text-transform: uppercase;
-  font-family: var(--ff-libre-franklin);
-  font-size: 10px;
-  font-weight: 400;
   margin-bottom: 30px;
-  line-height: 12px;
-  letter-spacing: 1px;
 }
 
 .latest-posts__cards {
@@ -356,6 +356,10 @@ articles__img img {
   grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   column-gap: 20px;
   row-gap: 74px;
+}
+
+.latest-posts__img img {
+  aspect-ratio: 285 / 187;
 }
 
 .lastest-posts__btn {
@@ -376,4 +380,37 @@ articles__img img {
 
 /* end latest-posts */
 
+/* featured-posts */
+.featured-posts {
+  padding: 90px 0 0;
+}
+
+.featured-posts__title {
+  margin-bottom: 30px;
+}
+
+.featured-posts__cards {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 50px;
+
+  /* Расположил так, поскольку картинка некрасиво растягивается на экран */
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 590px));
+}
+
+.featured-posts__img img {
+  aspect-ratio: 590 / 387;
+}
+
+/* end featured-posts */
+
 /* end main */
+
+/* footer */
+
+.footer {
+  background-color: var(--secondary-bg-color);
+}
+
+/* end footer */
