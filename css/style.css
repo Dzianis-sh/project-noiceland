@@ -331,4 +331,49 @@ articles__img img {
 
 /* end articles */
 
+/* latest-posts */
+
+.latest-posts {
+  padding: 90px 0;
+  display: grid;
+  grid-template: repeat(3, minmax(auto, auto)) / 1fr;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.latest-posts__title {
+  text-transform: uppercase;
+  font-family: var(--ff-libre-franklin);
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+
+.latest-posts__cards {
+  padding-bottom: 90px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  column-gap: 20px;
+  row-gap: 74px;
+}
+
+.lastest-posts__btn {
+  justify-self: center;
+  font-family: var(--ff-libre-franklin);
+  text-transform: uppercase;
+  padding: 21px 26px;
+  background-color: var(--main-bg-color);
+  border: 1px solid #000000;
+  transition: 0.3s;
+}
+
+.lastest-posts__btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+  box-shadow: 0 0 5px var(--secondary-bg-color);
+}
+
+/* end latest-posts */
+
 /* end main */
