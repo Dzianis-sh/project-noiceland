@@ -293,20 +293,29 @@ a:hover {
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 50px;
-  justify-content: space-evenly;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 386px));
-  /* grid-template-columns: repeat(auto-fill, minmax(386px, 1fr)); */
+
+  /*justify-content: space-evenly; 
+    grid-template-columns: repeat(auto-fill, minmax(auto, 386px)); */
+
+  grid-template-columns: repeat(auto-fill, minmax(386px, 1fr));
   padding-top: 60px;
   padding-bottom: 90px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .card__img {
+  width: 100%;
   margin-bottom: 24px;
   overflow: hidden;
 }
 
+.card__img a {
+  display: block;
+}
+
 .card__img img {
+  width: 100%;
+  height: auto;
   transition: all 0.4s;
 }
 
