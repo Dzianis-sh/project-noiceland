@@ -427,7 +427,32 @@ articles__img img {
 /* footer */
 
 .footer {
+  padding: 90px 0;
   background-color: var(--secondary-bg-color);
 }
+.footer-top {
+  margin-bottom: 60px;
+}
 
+.footer-top__logo {
+  transition: 0.4s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.footer-top__logo path {
+  transition: 0.3s;
+}
+
+.footer-top__logo:hover path {
+  fill: #888888;
+}
+
+.footer-top__copyright {
+  color: var(--footer-titles-text-color);
+}
+.footer-bot {
+}
 /* end footer */
