@@ -219,6 +219,8 @@ a:hover {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* wide-block */
+
 .wide-block {
   display: flex;
   margin-bottom: 60px;
@@ -252,6 +254,8 @@ a:hover {
   font-weight: 400;
   margin-bottom: 28px;
 }
+
+/* end wide-block */
 
 /* class description */
 
@@ -295,6 +299,19 @@ a:hover {
 }
 
 /* end class description */
+
+/* .card styles */
+
+.card {
+  transition: 0.3s;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 0 10px var(--border-color);
+}
+
+/* end .card styles */
 
 /* articles */
 
