@@ -1,8 +1,8 @@
 # NOICELAND - Landing Page #
 
-Noiceland.
+Noiceland
 
-It's written on HTML/CSS, without using preprocessors SASS/SCSS.
+It's written on HTML/CSS.
 
 [Github Pages](https://dzianis-sh.github.io/project-noiceland/)
 
